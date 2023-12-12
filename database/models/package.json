@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "prisma-import -f",
     "gen": "prisma generate",
-    "pull": "env-cmd -f ./.env.development prisma db pull",
+    "#warning#pull": "env-cmd -f ./.env.development prisma db pull",
     "push": "env-cmd -f ./.env.development prisma db push"
   },
   "keywords": [],
