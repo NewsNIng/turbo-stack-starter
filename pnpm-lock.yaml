@@ -22,8 +22,11 @@ importers:
       '@database/models':
         specifier: workspace:*
         version: link:../../database/models
+      '@prisma/client':
+        specifier: 5.7.0
+        version: 5.7.0(prisma@5.7.0)
       '@trpc/server':
-        specifier: 10.44.1
+        specifier: ^10.44.1
         version: 10.44.1
       cors:
         specifier: ^2.8.5
@@ -72,6 +75,9 @@ importers:
 
   frontend/web:
     dependencies:
+      '@backend/server':
+        specifier: workspace:*
+        version: link:../../backend/server
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -81,21 +87,24 @@ importers:
       '@trpc/next':
         specifier: ^10.44.1
         version: 10.44.1(@tanstack/react-query@4.36.1)(@trpc/client@10.44.1)(@trpc/react-query@10.44.1)(@trpc/server@10.44.1)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
-      '@trpc/react-query':
-        specifier: ^10.44.1
-        version: 10.44.1(@tanstack/react-query@4.36.1)(@trpc/client@10.44.1)(@trpc/server@10.44.1)(react-dom@18.2.0)(react@18.2.0)
       '@trpc/server':
         specifier: ^10.44.1
         version: 10.44.1
       next:
         specifier: ^14.0.3
         version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
+      next-auth:
+        specifier: ^4.24.5
+        version: 4.24.5(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
       react:
         specifier: ^18.2.0
         version: 18.2.0
       react-dom:
         specifier: ^18.2.0
         version: 18.2.0(react@18.2.0)
+      superjson:
+        specifier: ^1.13.1
+        version: 1.13.1
     devDependencies:
       '@next/eslint-plugin-next':
         specifier: ^14.0.2

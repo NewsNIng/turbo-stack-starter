@@ -5,16 +5,17 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "scripts": {
-    "dev": "tsx watch ./server.ts",
-    "build": "tsc -p tsconfig.json",
+    "#warning#dev": "tsx watch ./server.ts",
+    "#warning#build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@database/models": "workspace:*",
+    "@prisma/client": "5.7.0",
     "@trpc/server": "^10.44.1",
     "cors": "^2.8.5",
-    "next-auth": "^4.24.5",
     "next": "^14.0.3",
+    "next-auth": "^4.24.5",
     "superjson": "^1.13.1",
     "zod": "^3.22.2"
   },
