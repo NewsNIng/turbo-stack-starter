@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@frontend/web",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "@trpc/client": "^10.44.1",
+    "@trpc/next": "^10.44.1",
+    "@trpc/react-query": "^10.44.1",
+    "@trpc/server": "^10.44.1",
     "next": "^14.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

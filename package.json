@@ -2,8 +2,8 @@
   "name": "turbo-stack",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
+    "build": "turbo build --filter=!@database/*",
+    "dev": "turbo dev --filter=!@database/*",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

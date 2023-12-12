@@ -1,0 +1,30 @@
+{
+  "name": "@database/models",
+  "version": "1.0.0",
+  "description": "",
+  "prisma": {
+    "import": {
+      "schemas": "./src/**/*",
+      "output": "./prisma/schema.prisma"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "prisma-import -f",
+    "gen": "prisma generate",
+    "pull": "env-cmd -f ./.env.development prisma db pull",
+    "push": "env-cmd -f ./.env.development prisma db push"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "5.7.0"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "env-cmd": "^10.1.0",
+    "prisma": "5.7.0",
+    "prisma-import": "^1.0.4"
+  }
+}
