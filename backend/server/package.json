@@ -5,7 +5,7 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "scripts": {
-    "#warning#dev": "tsx watch ./server.ts",
+    "#warning#dev": "env-cmd -f ./.env.development tsx watch ./server.ts",
     "#warning#build": "tsc -p tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,7 +22,8 @@
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
     "@types/cors": "^2.8.14",
-    "tsx": "^3.12.10"
+    "tsx": "^3.12.10",
+    "env-cmd": "^10.1.0"
   },
   "packageManager": "pnpm@8.0.0"
 }
