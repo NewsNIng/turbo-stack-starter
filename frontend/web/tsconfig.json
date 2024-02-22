@@ -8,12 +8,13 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@utils/*": ["utils/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "include": [
     "next-env.d.ts",
     "next.config.js",
+    "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
