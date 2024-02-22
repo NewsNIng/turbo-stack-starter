@@ -3,6 +3,9 @@
 // import { PrismaPlugin } from "@prisma/nextjs-monorepo-workaround-plugin";
 
 
+
+import autoImportPlugin from 'unplugin-auto-import/webpack';
+
 /** @type {import('next').NextConfig} */
 
 const config = {
@@ -16,9 +19,37 @@ const config = {
   },
   webpack: (config, { isServer }) => {
     if (isServer) {
-     // config.plugins = [...config.plugins, new PrismaPlugin()]
+      // config.plugins = [...config.plugins, new PrismaPlugin()]
     }
+
+    config.plugins.push(autoImportPlugin({
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+      ],
+      injectAtEnd: false,
+      imports: [
+        'react',
+        {
+          '@utils/api': ['api'],
+
+        },
+        {
+          // 'tagged-classnames-free': ['cls', 'tw'],
+        },
+      ],
+    }));
+
+
+
     return config
+  },
+  modularizeImports: {
+    // 'antd': {
+    //   transform: 'antd/lib/{{ kebabCase member }}',
+    // },
+    'lodash-es': {
+      transform: 'lodash-es/{{member}}',
+    },
   },
 };
 
