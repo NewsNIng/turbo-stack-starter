@@ -9,6 +9,7 @@ import autoImportPlugin from 'unplugin-auto-import/webpack';
 /** @type {import('next').NextConfig} */
 
 const config = {
+  output: "standalone",
   reactStrictMode: true,
   transpilePackages: ["@repo/ui"],
   eslint: {

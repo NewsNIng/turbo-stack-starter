@@ -5,7 +5,10 @@
     "build": "turbo build --filter=!@database/*",
     "dev": "turbo dev --filter=!@database/*",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "docker:build": "docker compose -f ./docker/docker-compose.yml build",
+    "docker:start": "docker compose -f ./docker/docker-compose.yml up -d",
+    "docker:stop": "docker compose -f ./docker/docker-compose.yml down"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
