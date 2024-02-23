@@ -30,7 +30,7 @@ COPY . .
 
 RUN  corepack enable pnpm && pnpm install --offline
 
-RUN cd frontend/web && pnpm build
+RUN pnpm build
 
 
 
